@@ -5,7 +5,7 @@ import { config } from '@grafana/runtime';
 import { Alert } from '@grafana/ui';
 import { DATASOURCE_REF } from '../../constants';
 import { PluginPropsContext } from '../../utils/utils.plugin';
-// import { helloWorldPage } from '../../pages/HelloWorld/helloWorldPage';
+import { helloWorldPage } from '../../pages/HelloWorld/helloWorldPage';
 // import { homePage } from '../../pages/Home/homePage';
 // import { withDrilldownPage } from '../../pages/WithDrilldown/withDrilldownPage';
 // import { withTabsPage } from '../../pages/WithTabs/withTabsPage';
@@ -15,7 +15,8 @@ import { abcValuesPage } from '../../pages/AB/ABCValuesPage';
 function getSceneApp() {
   return new SceneApp({
     // pages: [helloWorldPage, homePage, withDrilldownPage, withTabsPage, abcPage, abcValuesPage],
-    pages: [abcPage, abcValuesPage],
+    pages: [helloWorldPage, abcPage, abcValuesPage],
+    // pages: [abcPage, abcValuesPage],
     urlSyncOptions: {
       updateUrlOnInit: true,
       createBrowserHistorySteps: true,
