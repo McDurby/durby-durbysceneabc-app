@@ -32,12 +32,13 @@ let scene = new EmbeddedScene({
 // How does Grafana Dashboard update the SceneVariableSet to reflect
 // the change in the query?
 function add(value: string) {
-    console.log("before query:", ab.state.query);
+    const title = "ABCScene";
+    console.log(`${title} before query:`, ab.state.query);
     ab.setState({
         query: `${ab.state.query}, ${value}`
     });
 
-    console.log(" after query:", ab.state.query);
+    console.log(`${title}  after query:`, ab.state.query);
 }
 
 setTimeout(() => {

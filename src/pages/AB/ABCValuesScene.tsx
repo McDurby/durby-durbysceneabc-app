@@ -55,10 +55,12 @@ let scene = new EmbeddedScene({
 // How does Grafana Dashboard update the SceneVariableSet to reflect
 // the change in the query?
 setTimeout(() => {
-    console.log("abc:", abc);
-    console.log("avalues:", avalues);
-    console.log("bvalues:", bvalues);
-    console.log("cvalues:", cvalues);
+    const title = "ABCValuesScene";
+
+    console.log(`${title} abc:`, abc);
+    console.log(`${title} avalues:`, avalues);
+    console.log(`${title} bvalues:`, bvalues);
+    console.log(`${title} cvalues:`, cvalues);
 }, 2000);
 
 export function abcValuesScene() {
