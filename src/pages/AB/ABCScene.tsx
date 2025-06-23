@@ -1,8 +1,8 @@
 import { PanelBuilders, EmbeddedScene, SceneFlexLayout, SceneFlexItem, SceneTimePicker, SceneRefreshPicker, SceneControlsSpacer, VariableValueSelectors, SceneVariableSet, CustomVariable } from '@grafana/scenes';
 
-const ab = new CustomVariable({
-    name: 'ab',
-    label: 'ABC',
+const abc = new CustomVariable({
+    name: "abc",
+    label: "ABC",
     query: "A"
 });
 
@@ -10,7 +10,7 @@ const panel = PanelBuilders.timeseries().build();
 
 let scene = new EmbeddedScene({
     $variables: new SceneVariableSet({
-        variables: [ab],
+        variables: [abc],
     }),
     body: new SceneFlexLayout({
         children: [
@@ -33,12 +33,12 @@ let scene = new EmbeddedScene({
 // the change in the query?
 function add(value: string) {
     const title = "ABCScene";
-    console.log(`${title} before query:`, ab.state.query);
-    ab.setState({
-        query: `${ab.state.query}, ${value}`
+    console.log(`${title} before query:`, abc.state.query);
+    abc.setState({
+        query: `${abc.state.query}, ${value}`
     });
 
-    console.log(`${title}  after query:`, ab.state.query);
+    console.log(`${title}  after query:`, abc.state.query);
 }
 
 setTimeout(() => {
@@ -46,7 +46,7 @@ setTimeout(() => {
     setTimeout(() => {
         add("C");
     }, 2000);
-}, 2000);
+}, 10000);
 
 export function abcScene() {
     return scene;
