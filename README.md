@@ -65,6 +65,12 @@ After timeouts are completed:
 
 ![Scene Custom Variable - only A at Done](img/ABC-OnlyA-Done.png)
 
+Questions:
+
+1. How can Grafana Dashboard update the `SceneVariableSet` to reflect the changes in the `abc.query`?
+2. How can this functionality be replicated in ABCScenes? `abc.setState()` does not trigger a refresh since `CustomVariable` is read-only.
+3. How can the `SceneVariableSet` be updated to reflect new variables, this is the `ABCValuesScene.tsx` example?
+
 ## Grafana development
 
 See the Grafana [README](README-Grafana.md) on how to create, build and run a Scenes plugin.
