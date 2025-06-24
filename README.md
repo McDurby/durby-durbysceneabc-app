@@ -69,7 +69,7 @@ Questions:
 
 1. How can Grafana Dashboard update the `SceneVariableSet` to reflect the changes in the `abc.query`?
 2. How can this functionality be replicated in ABCScenes? `abc.setState()` does not trigger a refresh since `CustomVariable` is read-only.
-3. How can the `SceneVariableSet` be updated to reflect new variables, this is the `ABCValuesScene.tsx` example?
+3. How can the `SceneVariableSet` be updated to reflect new variables, this will be the `ABCValuesScene.tsx` example when completed?
 
 ## Grafana development
 
